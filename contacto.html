@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="contacto.css">
+    <link rel="shortcut icon" href="imagenes/logo2.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+		<div id="menu">
+            <div id="logo_titulo">
+				<img src="imagenes/logo2.png" width="50px" height="50px" style="border-radius: 155px;">
+                <h1>Tecnosolutions</h1>
+            </div>
+            <div id="navegador">
+                <input type="checkbox" id="menu1">
+                <label for="menu1">
+                <img class="menu-icono" src="imagenes/menu.png">
+                </label>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="index_1.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="juegos.html">Juegos</a></li>
+                    </ul>
+                </nav>
+            </div>
+		</div>
+    </header>
+    <div class="container" id="formContainer">
+        <h2>Formulario de Atención al Cliente</h2>
+        <form action="conectar.php" method="post">
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Mikel" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Mikel@gmail.com" required>
+        </div>
+        <div class="form-group">
+            <label for="movil">Teléfono:</label>
+            <input type="text" id="movil" name="movil" placeholder="123456789">
+        </div>
+        <div class="form-group">
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni" placeholder="12345678L" pattern="[0-9]{8}[A-Za-z]{1}" required>
+        </div>
+        <div class="form-group-dos">
+            <label for="fecha">Fecha de nacimiento</label>
+            <input type="date" name="fecha" id="fecha" class="form-control" value="2019-08-09">
+        </div>
+        <div class="form-group">
+            <label>Género:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="genero" value="hombre" required> Hombre</label>
+                <label><input type="radio" name="genero" value="mujer"> Mujer</label>
+                <label><input type="radio" name="genero" value="otro"> Otro</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Dispositivos que posees:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="servicios" value="Ordenador de sobremesa"> Ordenador de sobremesa</label>
+                <label><input type="checkbox" name="servicios" value="Teléfono"> Teléfono</label>
+                <label><input type="checkbox" name="servicios" value="Portátil"> Portátil</label>
+                <label><input type="checkbox" name="servicios" value="monitor"> Monitor</label>
+                <label><input type="checkbox" name="servicios" value="Monitor"> Teclado</label>
+                <label><input type="checkbox" name="servicios" value="Ratón"> Ratón</label>
+                </div>
+        </div>
+        <div class="form-group-dos">
+            <label for="consulta">Motivo de consulta:</label>
+            <select id="consulta" name="consulta">
+            <option value="consulta">Consulta</option>
+            <option value="queja">Queja</option>
+            <option value="sugerencia">Sugerencia</option>
+            <option value="otro">Otro</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Mensaje">Mensaje:</label>
+            <textarea id="Mensaje" name="Mensaje" placeholder="Escribe aquí tu mensaje"></textarea>
+        </div>
+        
+        <button type="submit">Enviar</button>
+        <button type="reset">Borrar</button>
+        </form>
+    </div>
+    <footer>
+        <div class="footer">
+            <ul class="social">
+                <li><a href="https://www.youtube.com/" target="blank"><img src="imagenes/youtube.jpg" alt="youtube"></a></li>
+                <li><a href="https://www.twitter.com/" target="blank"><img src="imagenes/twiter.jpg" alt="twitter"></a></li>
+                <li><a href="https://www.tiktok.com/" target="blank"><img src="imagenes/tiktok.jpg" alt="tiktok"></a></li>
+                <li><a href="https://www.instagram.com/" target="blank"><img src="imagenes/imstragram.jpg" alt="instagram"></a></li>
+                <li><a href="https://www.facebook.com/" target="blank"><img src="imagenes/facebook.jpg" alt="facebook"></a></li>
+                <li><a href="https://www.linkedin.com/" target="blank"><img src="imagenes/in.jpg" alt="in"></a></li>
+            </ul>
+            <p>&copy; 2024 Tecnosolutions. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+<script>
+    function validarFormulario() {
+        var movil = document.getElementById('dni').value;
+        var usuario = document.getElementById('usuario').value;
+        
+        if (dni.length != 9) {
+            alert('El dni tiene que tener 8 numeros y 1 letra.');
+            return false;
+        }
+        
+        if (usuario == '') {
+            alert('El nombre de usuario no puede estar vacío.');
+            return false;
+        }
+        
+        alert('Formulario enviado correctamente.');
+        return true;
+    }
+    </script>

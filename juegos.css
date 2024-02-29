@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+}
+header{
+	margin: 1%;
+}
+#menu {
+	display: flex;
+	justify-content: space-between;
+    background-color: antiquewhite;
+}
+ul {
+	display: flex;
+	flex-wrap: wrap;
+    
+}
+.navbar li {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid black 2px;
+    padding: 25px;
+	border-radius: 18px;
+    
+}
+.desaparecer {
+	display: none;
+}
+#menu1 {
+	display: none; 
+
+}
+
+.menu-icono{
+	width: 25px;
+
+}
+
+
+#logo_titulo{
+    margin: 1%;
+    display: flex;
+}
+
+#navegador label{
+	cursor: pointer;
+	display: none;
+}
+h1{
+	margin: 2%;
+	font-family: 'Times New Roman', Times, serif;
+  }
+@media (max-width:991px) {
+
+	#menu{
+		padding: 20px;
+		position: relative;
+	}
+    #menu label {
+		display: initial;
+	}
+	
+    #menu1 {
+        display: initial; 
+    }
+
+	#menu1{
+		visibility: hidden;
+
+	}
+
+	#menu .navbar {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background-color: orangered;
+		display: none;
+		z-index: 1;
+	}
+    #menu .navbar ul li {
+		width: 100%;
+		padding: 20px 0;
+	}
+
+	#menu .navbar ul li a:hover {
+		color: white;
+	}
+
+	#menu1:checked ~ .navbar {
+		display: initial;
+	}
+
+	.header-content {
+		padding: 30px;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.header-text {
+		padding: 0 0 40px 0;
+	}
+}
+
+/* Medio */
+body{
+	background-image: url(imagenes/fondo1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#contenedor{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	margin: 4%;
+	
+}
+#primera-linea{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 95%;
+}
+#segunda-linea{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 95%;
+}
+.caja-1 {
+	position: relative;
+	max-width: 200px; 
+  }
+  .caja-1 .caja-1-texto {
+	position: absolute; 
+	bottom: 2%; 
+	background: rgb(255, 2, 2); 
+	background: rgba(251, 0, 0, 0.5); 
+	color: #f1f1f1; 
+	width: 55%; 
+	text-align: center;
+}
+.caja-2 {
+	position: relative;
+	max-width: 200px; 
+	margin-left: 5%;
+	  }
+.caja-2 .caja-2-texto {
+	position: absolute; 
+	bottom: 2%; 
+	background: rgb(255, 2, 2); 
+	background: rgba(251, 0, 0, 0.5); 
+	color: #f1f1f1; 
+	width: 55%; 
+	text-align: center;
+}
+.caja-3 {
+	position: relative;
+	max-width: 200px; 
+  }
+.caja-3 .caja-3-texto {
+	position: absolute; 
+	bottom: 2%; 
+	background: rgb(255, 2, 2); 
+	background: rgba(251, 0, 0, 0.5); 
+	color: #f1f1f1; 
+	width: 55%; 
+	text-align: center;
+}
+.caja-4 {
+	position: relative;
+	max-width: 200px; 
+	margin-left: 5%;
+  }
+.caja-4 .caja-4-texto {
+	position: absolute; 
+	bottom: 2%; 
+	background: rgb(255, 2, 2); 
+	background: rgba(251, 0, 0, 0.5); 
+	color: #f1f1f1; 
+	width: 55%; 
+	text-align: center;		
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos generales del footer */
+footer {
+	background-color: black;
+	padding: 20px;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+/* Estilos para la lista de redes sociales */
+.social {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: center; /* Centra horizontalmente los íconos */
+}
+
+.social li {
+	margin-right: 10px;
+}
+
+.social img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	transition: transform 0.3s ease;
+}
+
+.social img:hover {
+	transform: scale(1.2);
+}
+
+/* Estilos para el texto de derechos de autor */
+.footer p {
+	font-size: 16px;
+	color: white;
+	margin-top: 10px;
+}
+
+/* Media query para hacer el footer responsive */
+@media screen and (max-width: 768px) {
+	.social img {
+		width: 30px;
+		height: 30px;
+	}
+}

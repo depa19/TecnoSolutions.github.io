@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+list-style: none;
+}
+header{
+width: 98.5%;
+position: fixed;
+z-index: 1;
+margin: 1%;
+}
+#menu {
+display: flex;
+justify-content: space-between;
+background-color: antiquewhite;
+}
+ul {
+display: flex;
+flex-wrap: wrap;
+  
+}
+.navbar li {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  border: solid black 2px;
+  padding: 25px;
+border-radius: 18px;
+  
+}
+.desaparecer {
+display: none;
+}
+#menu1 {
+display: none; 
+
+}
+
+.menu-icono{
+width: 25px;
+
+}
+
+
+#logo_titulo{
+  margin: 1%;
+  display: flex;
+}
+
+#navegador label{
+cursor: pointer;
+display: none;
+}
+h1{
+  margin: 2%;
+  font-family: 'Times New Roman', Times, serif;
+}
+@media (max-width:991px) {
+
+	#menu{
+		padding: 20px;
+		position: relative;
+	}
+    #menu label {
+		display: initial;
+	}
+	
+    #menu1 {
+        display: initial; 
+    }
+
+	#menu1{
+		visibility: hidden;
+	}
+
+	#menu .navbar {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background-color: orangered;
+		display: none;
+	}
+    #menu .navbar ul li {
+		width: 100%;
+		padding: 20px 0;
+	}
+
+	#menu .navbar ul li a:hover {
+		color: white;
+	}
+
+	#menu1:checked ~ .navbar {
+		display: initial;
+	}
+
+	.header-content {
+		padding: 30px;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.header-text {
+		padding: 0 0 40px 0;
+	}
+}
+
+
+
+
+
+
+/* Productos */
+
+body{
+  background-image: url(imagenes/fondo1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.titulos{
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+
+.titulos h1{
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.producto {
+  width: 30%;
+
+  box-shadow: 0px 0px 5px #999;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.producto img {
+  max-width: 100%;
+  height: auto;
+}
+
+.producto h2 {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #ffffff;
+}
+
+.producto p {
+  color: #ffffff;
+}
+
+.producto h4 {
+  color: #ffffff;
+}
+
+
+
+* {
+box-sizing: border-box;
+font-family: "Lato", sans-serif;
+margin: 0; 
+padding: 0;
+}
+
+
+
+/* Animación para los productos */
+
+
+.producto {
+  transition: transform 0.3s ease;
+  border: 3px solid transparent;
+  animation: cambioColor 5s infinite alternate; /* Animación de cambio de color constante para el borde */
+}
+
+@keyframes cambioColor {
+  0% { border-color: blue; } /* Cambia el color del borde al inicio de la animación */
+  25% { border-color: green; } /* Cambia el color del borde al final de la animación */
+  50% { border-color: yellow; } /* Cambia el color del borde a la mitad de la animación */
+  75% { border-color: orangered; } /* Cambia el color del borde al final de la animación */
+  100% { border-color: red; } /* Cambia el color del borde al final de la animación */
+}
+
+/* Animación para los títulos */
+.titulos {
+  transition: color 0.3s ease;
+}
+
+.titulos:hover {
+  color: red; /* Cambia el color al pasar el cursor sobre los títulos */
+  animation: bounce 0.5s ease; /* Agrega una animación de rebote al pasar el cursor */
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Animación para las imágenes */
+.producto img {
+  transition: transform 0.3s ease;
+}
+
+.producto img:hover {
+  transform: scale(1.1); /* Escala la imagen al pasar el cursor sobre ella */
+}
+
+
+
+/* Animación para el título de los nombres de los productos */
+.producto h2 {
+  animation: fadeIn 1s ease; /* Animación de fade in al cargar la página */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Comienza con una opacidad de 0 (invisible) */
+    transform: translateY(-20px); /* Desplazamiento hacia arriba */
+  }
+  to {
+    opacity: 1; /* Termina con una opacidad de 1 (totalmente visible) */
+    transform: translateY(0); /* Sin desplazamiento */
+  }
+}
+
+/* Animación para el borde con sombra */
+.producto {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0); /* Establece una sombra transparente inicialmente */
+  transition: box-shadow 0.3s ease; /* Agrega una transición suave para la sombra */
+}
+
+.producto:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Cambia la sombra al pasar el cursor sobre el elemento */
+}
+
+
+/* Footer */
+
+/* Estilos generales del footer */
+footer {
+	background-color: black;
+	padding: 20px;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+}
+
+/* Estilos para la lista de redes sociales */
+.social {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: center; /* Centra horizontalmente los íconos */
+}
+
+.social li {
+	margin-right: 10px;
+}
+
+.social img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	transition: transform 0.3s ease;
+}
+
+.social img:hover {
+	transform: scale(1.2);
+}
+
+/* Estilos para el texto de derechos de autor */
+.footer p {
+	font-size: 16px;
+	color: white;
+	margin-top: 10px;
+}
+
+/* Media query para hacer el footer responsive */
+@media screen and (max-width: 768px) {
+	.social img {
+		width: 30px;
+		height: 30px;
+	}
+}

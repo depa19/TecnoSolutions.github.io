@@ -1,0 +1,300 @@
+body{
+	background-image: url("imagenes/fondo1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+* {
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+}
+header{
+	margin: 1%;
+}
+#menu {
+	display: flex;
+	justify-content: space-between;
+    background-color: antiquewhite;
+}
+ul {
+	display: flex;
+	flex-wrap: wrap;
+    
+}
+.navbar li {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid black 2px;
+    padding: 25px;
+	border-radius: 18px;
+    
+}
+.desaparecer {
+	display: none;
+}
+#menu1 {
+	display: none; 
+
+}
+
+.menu-icono{
+	width: 25px;
+
+}
+
+
+#logo_titulo{
+    margin: 1%;
+    display: flex;
+}
+
+#navegador label{
+	cursor: pointer;
+	display: none;
+}
+h1{
+	margin: 2%;
+	font-family: 'Times New Roman', Times, serif;
+  }
+@media (max-width:991px) {
+
+	#menu{
+		padding: 20px;
+		position: relative;
+	}
+    #menu label {
+		display: initial;
+	}
+	
+    #menu1 {
+        display: initial; 
+    }
+
+	#menu1{
+		visibility: hidden;
+	}
+
+	#menu .navbar {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background-color: orangered;
+		display: none;
+	}
+    #menu .navbar ul li {
+		width: 100%;
+		padding: 20px 0;
+	}
+
+	#menu .navbar ul li a:hover {
+		color: white;
+	}
+
+	#menu1:checked ~ .navbar {
+		display: initial;
+	}
+
+	.header-content {
+		padding: 30px;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.header-text {
+		padding: 0 0 40px 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo general del formulario */
+.container {
+	max-width: 30%;
+	margin: 5% auto;
+	padding: 1%;
+	border-radius: 5%;
+	color: aliceblue;
+}
+
+	/* Estilo para los títulos */
+h2 {
+	text-align: center;
+}
+
+	/* Estilo para los campos de entrada */
+.form-group {
+	margin-bottom: 5%;
+}
+.form-group-dos {
+	margin-bottom: 5%;
+}
+
+label {
+	display: block;
+	margin-bottom: 2%;
+}
+
+	/* Estilo para los campos de entrada de texto y select */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+	width: 100%;
+	padding: 2%;
+	border: 1px solid #ccc;
+	border-radius: 6%;
+}
+	/* Estilo para los campos de fecha y género */
+input[type="date"],
+select {
+	font-size: 150%;
+}
+
+	/* Estilo para los campos de radio y checkbox */
+.radio-group,
+.checkbox-group {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.radio-group label,
+.checkbox-group label {
+	flex-basis: 50%;
+	margin-bottom: 3%;
+}
+
+	/* Estilo para los botones */
+button {
+	display: block;
+	width: 100%;
+	padding: 3%;
+	margin-top: 3%;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 1%;
+	cursor: pointer;
+}
+
+button[type="reset"] {
+	background-color: #dc3545;
+}
+
+
+  /* Estilo para los campos de entrada de texto y email dentro de .form-group */
+.form-group input[type="text"],
+.form-group input[type="email"] {
+	width: 30%; /* Ancho inicial */
+	transition: width 0.4s ease-in-out; /* Transición de ancho */
+}
+
+  /* Cuando elq campo de entrada dentro de .form-group obtiene el enfoque, cambia su ancho a 100% */
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus {
+	width: 100%; /* Ancho al obtener el foco */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos generales del footer */
+footer {
+	background-color: black;
+	padding: 1%;
+	text-align: center;
+	width: 100%;
+}
+
+/* Estilos para la lista de redes sociales */
+.social {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: center; 
+}
+
+.social li {
+	margin-right: 1%;
+}
+
+.social img {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	transition: transform 0.3s ease;
+}
+
+.social img:hover {
+	transform: scale(1.2);
+}
+
+/* Estilos para el texto de derechos de autor */
+.footer p {
+	font-size: 100%;
+	color: white;
+	margin-top: 1%;
+}
+
+
+
+/* Media query para hacer el footer responsive */
+@media screen and (min-width: 768px) {
+	.container {
+	width: 80%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.social img {
+		width: 2rem;
+		height: 2rem;
+	}
+	.footer p {
+		font-size: 70%;
+		color: blue;
+	}
+
+
+
+
+
+
+	input[type="date"],
+	select {
+		font-size: 100%;
+	}
+	.form-group input[type="text"],
+	.form-group input[type="email"] {
+		width: 60%; 
+		transition: width 0.4s ease-in-out; 
+	}.radio-group label,
+	.checkbox-group label {
+		flex-basis: 70%;
+		margin-bottom: 6%;
+	}
+}
+
